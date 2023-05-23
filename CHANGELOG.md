@@ -1,5 +1,77 @@
 # Changelog
 
+## [1.0.0](https://github.com/james-milligan/golang-sdk/compare/v1.3.0...v1.0.0) (2023-05-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade Go to 1.18 ([#140](https://github.com/james-milligan/golang-sdk/issues/140))
+* made EvaluationContext fields unexported with a constructor and setters to enforce immutability ([#91](https://github.com/james-milligan/golang-sdk/issues/91))
+* changed client details signatures to return new type ([#84](https://github.com/james-milligan/golang-sdk/issues/84))
+* spec v0.5.0 compliance ([#82](https://github.com/james-milligan/golang-sdk/issues/82))
+* defined type for provider interface evaluation context ([#74](https://github.com/james-milligan/golang-sdk/issues/74))
+* replaced EvaluationOptions with variadic option setter in client functions ([#77](https://github.com/james-milligan/golang-sdk/issues/77))
+* introduced context.Context to client and provider api ([#75](https://github.com/james-milligan/golang-sdk/issues/75))
+* rename module to go-sdk ([#66](https://github.com/james-milligan/golang-sdk/issues/66))
+* remove duplicate Value field from ResolutionDetail structs ([#58](https://github.com/james-milligan/golang-sdk/issues/58))
+* flatten evaluationContext object ([#51](https://github.com/james-milligan/golang-sdk/issues/51))
+
+### Features
+
+* add STATIC, CACHED reasons ([#136](https://github.com/james-milligan/golang-sdk/issues/136)) ([ffdde63](https://github.com/james-milligan/golang-sdk/commit/ffdde638926e7f68837fd160c45fdc6cf1b34687))
+* changed client details signatures to return new type ([#84](https://github.com/james-milligan/golang-sdk/issues/84)) ([25ecdac](https://github.com/james-milligan/golang-sdk/commit/25ecdacb8303f95ec88656a7f47c8bd2ef0c019a))
+* go context in hook calls ([#163](https://github.com/james-milligan/golang-sdk/issues/163)) ([fc569ec](https://github.com/james-milligan/golang-sdk/commit/fc569ec81c0fe64779cf04ed6b8b7fd14d21b395))
+* HookContext constructor ([#130](https://github.com/james-milligan/golang-sdk/issues/130)) ([1701648](https://github.com/james-milligan/golang-sdk/commit/1701648c5f137a78d850a613db2b159f44a19f86))
+* implemented structured logging ([#54](https://github.com/james-milligan/golang-sdk/issues/54)) ([04649c5](https://github.com/james-milligan/golang-sdk/commit/04649c5b954531601dc3e8a474bbff66094d3b1c))
+* introduce UnimplementedHook to avoid authors having to define empty functions ([#55](https://github.com/james-milligan/golang-sdk/issues/55)) ([0c0bd32](https://github.com/james-milligan/golang-sdk/commit/0c0bd32894346babe8d180b086362e95fd3670ef))
+* introduced context.Context to client and provider api ([#75](https://github.com/james-milligan/golang-sdk/issues/75)) ([d850c88](https://github.com/james-milligan/golang-sdk/commit/d850c8873d617aec7d1013aa1c751aa5bf0dce92))
+* made EvaluationContext fields unexported with a constructor and setters to enforce immutability ([#91](https://github.com/james-milligan/golang-sdk/issues/91)) ([691a1e3](https://github.com/james-milligan/golang-sdk/commit/691a1e360e1966280d1b03579ea5e9f03afadf94))
+* NewClientMetadata constructor  ([#133](https://github.com/james-milligan/golang-sdk/issues/133)) ([fa8b15b](https://github.com/james-milligan/golang-sdk/commit/fa8b15b4a66c1f606dcc3e631e427631ad63b8c5))
+* remove EvaluationOptions from FeatureProvider func signatures. ([91aaeb5](https://github.com/james-milligan/golang-sdk/commit/91aaeb5893a79ae7ebc9949c7c59aa72b7651e09))
+* rename module to go-sdk ([#66](https://github.com/james-milligan/golang-sdk/issues/66)) ([75a901a](https://github.com/james-milligan/golang-sdk/commit/75a901a330ab7517e4c92def5f7bf854391203d6))
+* replaced EvaluationOptions with variadic option setter in client functions ([#77](https://github.com/james-milligan/golang-sdk/issues/77)) ([fc4b871](https://github.com/james-milligan/golang-sdk/commit/fc4b8716f6d3c904b464d34176d0c6ed67f741fc))
+* spec v0.5.0 compliance ([#82](https://github.com/james-milligan/golang-sdk/issues/82)) ([69b8f8e](https://github.com/james-milligan/golang-sdk/commit/69b8f8e534ad0b99bf3de67cca531720f4bfc2de))
+* upgrade Go to 1.18 ([#140](https://github.com/james-milligan/golang-sdk/issues/140)) ([c4c3c82](https://github.com/james-milligan/golang-sdk/commit/c4c3c828e581bdc3a29b4ec7859e1688ad9d9554))
+
+
+### Bug Fixes
+
+* add reason indicating pseudorandom split ([#76](https://github.com/james-milligan/golang-sdk/issues/76)) ([e843f5d](https://github.com/james-milligan/golang-sdk/commit/e843f5d101041e6e3ba785168b8526fcf7f50c8e))
+* allow nil value for object evaluation ([f45dba0](https://github.com/james-milligan/golang-sdk/commit/f45dba0678eac07eda8923842bae9b15cb8b99af))
+* allow nil value for object evaluation ([#118](https://github.com/james-milligan/golang-sdk/issues/118)) ([f45dba0](https://github.com/james-milligan/golang-sdk/commit/f45dba0678eac07eda8923842bae9b15cb8b99af))
+* Client uses value returned by provider ([#85](https://github.com/james-milligan/golang-sdk/issues/85)) ([436a712](https://github.com/james-milligan/golang-sdk/commit/436a7129668b558eb54b80121a75ef9e4b44deba))
+* **deps:** update module github.com/cucumber/godog to v0.12.6 ([#121](https://github.com/james-milligan/golang-sdk/issues/121)) ([780d5a4](https://github.com/james-milligan/golang-sdk/commit/780d5a419ffbef2701d018531bbe30676d3bef4d))
+* **deps:** update module github.com/go-logr/logr to v1.2.4 ([#171](https://github.com/james-milligan/golang-sdk/issues/171)) ([6ff22f1](https://github.com/james-milligan/golang-sdk/commit/6ff22f1084f5604099574c9443b0006f885c71e2))
+* **deps:** update module github.com/open-feature/flagd to v0.3.1 ([#137](https://github.com/james-milligan/golang-sdk/issues/137)) ([7f2652f](https://github.com/james-milligan/golang-sdk/commit/7f2652fcbbf26f962a902fd85945e5093d796f16))
+* **deps:** update module github.com/open-feature/flagd to v0.3.2 ([#145](https://github.com/james-milligan/golang-sdk/issues/145)) ([2f20979](https://github.com/james-milligan/golang-sdk/commit/2f20979e0c25a54710ac27759688c7824bf22429))
+* **deps:** update module github.com/open-feature/flagd to v0.3.4 ([#149](https://github.com/james-milligan/golang-sdk/issues/149)) ([31bd8b7](https://github.com/james-milligan/golang-sdk/commit/31bd8b7cc73279a58cb329f4d2f16064c1115e5a))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/providers/flagd to v0.1.3 ([#144](https://github.com/james-milligan/golang-sdk/issues/144)) ([1b9fd94](https://github.com/james-milligan/golang-sdk/commit/1b9fd94537c95e4ef53b24c24e5dc6e63026f71e))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/providers/flagd to v0.1.4 ([#146](https://github.com/james-milligan/golang-sdk/issues/146)) ([a45f288](https://github.com/james-milligan/golang-sdk/commit/a45f2888493f86759fbd513d3e06480ec83c30be))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/providers/flagd to v0.1.5 ([#154](https://github.com/james-milligan/golang-sdk/issues/154)) ([ae3f3da](https://github.com/james-milligan/golang-sdk/commit/ae3f3da27b8b226f9f3b44a5300f4d2fba3d59df))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/providers/flagd to v0.1.6 ([#156](https://github.com/james-milligan/golang-sdk/issues/156)) ([2432c20](https://github.com/james-milligan/golang-sdk/commit/2432c200332559816ddc237dbb9ff8fd9b3bbfcc))
+* **deps:** update module github.com/open-feature/go-sdk-contrib/providers/flagd to v0.1.7 ([#161](https://github.com/james-milligan/golang-sdk/issues/161)) ([cfe1d74](https://github.com/james-milligan/golang-sdk/commit/cfe1d7432ee96c4f18fa2d7eb5e18d502b21f693))
+* **deps:** update module golang.org/x/text to v0.6.0 ([#115](https://github.com/james-milligan/golang-sdk/issues/115)) ([728cd4b](https://github.com/james-milligan/golang-sdk/commit/728cd4bbe4e71eaf03f93edfcd1d1255a616c675))
+* **deps:** update module golang.org/x/text to v0.7.0 ([#157](https://github.com/james-milligan/golang-sdk/issues/157)) ([6857bb3](https://github.com/james-milligan/golang-sdk/commit/6857bb3c2b4fabb451aba0e04ba6fbfbbaf3f920))
+* **deps:** update module golang.org/x/text to v0.8.0 ([#167](https://github.com/james-milligan/golang-sdk/issues/167)) ([33334fa](https://github.com/james-milligan/golang-sdk/commit/33334fa7939f5d95bec25a0228800fb43c827d80))
+* **deps:** update module golang.org/x/text to v0.9.0 ([#172](https://github.com/james-milligan/golang-sdk/issues/172)) ([8bc9d7e](https://github.com/james-milligan/golang-sdk/commit/8bc9d7ef6f800b6593b0223840416a7debbc54fa))
+* ensure default client logger is updated when global logger changes ([#61](https://github.com/james-milligan/golang-sdk/issues/61)) ([f8e2827](https://github.com/james-milligan/golang-sdk/commit/f8e2827639d7e7f1206de933d4ed043489eadd7d))
+* locks on singleton and client state to ensure thread safety ([#93](https://github.com/james-milligan/golang-sdk/issues/93)) ([9dbd6b0](https://github.com/james-milligan/golang-sdk/commit/9dbd6b0f13bf9b22b2dace6445051f55f8031367))
+* remove duplicate Value field from ResolutionDetail structs ([#58](https://github.com/james-milligan/golang-sdk/issues/58)) ([945bd96](https://github.com/james-milligan/golang-sdk/commit/945bd96c808246614ad5a8ab846b0b530ff313cc))
+* resolution error only includes the code ([#96](https://github.com/james-milligan/golang-sdk/issues/96)) ([524b054](https://github.com/james-milligan/golang-sdk/commit/524b05478a08f17bf7892905352c1a5cf47a69a9))
+* return error code from client given by provider ([#67](https://github.com/james-milligan/golang-sdk/issues/67)) ([f0822b6](https://github.com/james-milligan/golang-sdk/commit/f0822b6ce9522cbbb10ed5168cecad2df6c29e40))
+* validate that a flag key is valid UTF-8 & implemented fuzzing tests ([#141](https://github.com/james-milligan/golang-sdk/issues/141)) ([e3e7f82](https://github.com/james-milligan/golang-sdk/commit/e3e7f829c978a706297365bb72492785be09f39c))
+
+
+### Code Refactoring
+
+* defined type for provider interface evaluation context ([#74](https://github.com/james-milligan/golang-sdk/issues/74)) ([69988c0](https://github.com/james-milligan/golang-sdk/commit/69988c097f16f3aaca9bdae07ea33fbce148872d))
+* flatten evaluationContext object ([#51](https://github.com/james-milligan/golang-sdk/issues/51)) ([b8383e1](https://github.com/james-milligan/golang-sdk/commit/b8383e148184c1d8e58ff74217cffc99e713d29f))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([#101](https://github.com/james-milligan/golang-sdk/issues/101)) ([665d670](https://github.com/james-milligan/golang-sdk/commit/665d6703fc39b33f0f11d3c427b479855c322c1b))
+
 ## [1.3.0](https://github.com/open-feature/go-sdk/compare/v1.2.0...v1.3.0) (2023-03-02)
 
 
